@@ -2,12 +2,14 @@
 import hero from './patials/hero.vue'
 import policies from './patials/policies.vue'
 import highlight from './patials/gameshighlight.vue'
+import subtitle from './patials/subtitles.vue'
 export default {
   name: 'mainpart',
   components: {
     hero,
     policies,
     highlight,
+    subtitle,
 
   }
 
@@ -19,6 +21,7 @@ export default {
   <hero/>
   <policies/>
   <highlight/>
+  <subtitle/>
   </div>
 
 </template>

@@ -15,5 +15,7 @@ export default {
 </template>
 
 <style>
-
+.container{
+  margin-bottom: 60px;
+}
 </style>
