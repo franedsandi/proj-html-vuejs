@@ -44,7 +44,9 @@ export default {
     button{
       margin-top: 50px;
       border-radius: 0;
-      width: 150px;
+      width: 120px;
+      height: 50px;
+      font-weight: 600;
     }
     .paralelogramo{
       position: relative;

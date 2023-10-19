@@ -1,9 +1,11 @@
 <script>
 import hero from './patials/hero.vue'
+import policies from './patials/policies.vue'
 export default {
   name: 'mainpart',
   components: {
     hero,
+    policies,
 
   }
 
@@ -13,6 +15,7 @@ export default {
 <template>
   <div class="custom-container">
   <hero/>
+  <policies/>
   </div>
 
 </template>
