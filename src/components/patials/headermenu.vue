@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="container d-flex justify-content-between align-items-center">
     <img src="img/mob-logo.png" alt="">
-    <ul class="d-flex gap-4">
+    <ul class="d-flex gap-5">
       <li><a href="#">Home</a></li>
       <li><a href="#">Shop</a></li>
       <li><a href="#">Blog</a></li>
@@ -27,12 +27,14 @@ export default {
 <style lang="scss" scoped>
 @import '../../scss/partials/vars';
   .container{
-    height: 50px;
+    height: 80px;
     color: $white-color;
     img{
-      width: 120px;
+      width: 200px;
     }
     ul{
+      font-size: 20px;
+      font-weight:500;
       margin: 0;
       list-style: none;
       span{

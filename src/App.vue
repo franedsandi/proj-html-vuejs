@@ -15,8 +15,8 @@ export default {
 
 <template>
   <headerpart/>
-<!--   <mainpart/>
-  <footerpart/> -->
+  <mainpart/>
+<!--   <footerpart/> -->
 </template>
 
 <style lang="scss">

@@ -35,26 +35,29 @@ export default {
   .container {
   color: #A79FAE;
   padding: 0px 10px;
-  font-size: 13px;
+  font-size: 20px;
+  height: 45px;
 
   a.help {
     margin: 0;
-    position: relative; 
+    position: relative;
+    margin-right:30px; 
+
     &::after {
       content: '';
       display: block;
       width: 1px; 
       background-color: #342B3E;
-      height: 80%;
+      height: 60%;
       position: absolute;
       top: 50%;
-      right: -7px;
+      right: -20px;
       transform: translateY(-50%)
       }
     }
   a {
     color: #A79FAE;
-    font-size: 13px;
+    font-size: 20px;
     text-decoration: none;
     &:hover{
       color: $yellow-color;
