@@ -34,9 +34,6 @@ export default {
     justify-content: center;
     padding: 15px;
     line-height: 0.8;
-    &:hover{
-      background-color: darken($purple-color, 2%); 
-    }
     p{
       color: $white-color;
       font-size: 20px;
@@ -45,8 +42,10 @@ export default {
     a{
       color: $yellow-color;
     }
-
   }
+  &:hover .info{
+      background-color: darken($purple-color, 2%); 
+    }
 }
 
 </style>
