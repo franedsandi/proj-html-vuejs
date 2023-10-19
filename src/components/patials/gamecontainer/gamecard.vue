@@ -44,8 +44,8 @@ export default {
     }
   }
   &:hover .info{
-      background-color: darken($purple-color, 2%); 
-    }
+    background-color: darken($purple-color, 2%); 
+  }
 }
 
 </style>
