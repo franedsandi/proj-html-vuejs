@@ -5,65 +5,67 @@ export default {
 </script>
 
 <template>
-  <div class="hero p-relative">
-    <img src="img/re3.jpg" alt="">
-    <div class="info p-absolute">
+  <div class="game">
+    <img src="img/cms-banner-01.jpg" alt="">
+    <div class="trapecio-rectangular">
+    </div>
+    <div class="info d-flex">
       <div class="paralelogramo">
-        <p class="">Upcoming Stock</p>
+        <p>Most Popular</p>
       </div>
-      <p>Resident Evil 3 Remake</p>
-      <button type="button" class="btn btn-light"><a href="#"></a>Shop Now</button>
+      <p>The Battlefield 4 Naval Strike</p> 
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../scss/partials/vars';
-.hero {
+.game {
+  width: 49%;
+  height: 325px;
   position: relative;
+  object-fit: contain;
   img {
     width: 100%;
   }
-  .info {
+  .trapecio-rectangular {
+    display: none;
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width: 30%;
-    margin-left: 14%;
+    background: linear-gradient(103deg, transparent 20%, rgba(248, 248, 252, 0.329) 70%, rgba(248, 248, 252, 0) 70.1%);
+  }
+  &:hover .trapecio-rectangular {
+    display: block;
+  }
+  .info {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    height: 100%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     p {
       color: white;
-      font-size: 70px;
-      font-weight: bold;
-      padding-top: 20px;
+      font-size: 30px;
       line-height: 1;
-    }
-    button {
-      margin-top: 50px;
-      border-radius: 0;
-      border: 0px;
-      width: 120px;
-      height: 50px;
-      font-weight: 600;
-      &:hover {
-        background-color: $yellow-color; // Cambiar el color de fondo al amarillo al pasar el ratón por encima
-      }
     }
     .paralelogramo {
       position: relative;
-      margin-left: 10px;
+      margin-left: 5px;
       width: 210px;
-      height: 50px;
+      height: 30px;
       background-color: $yellow-color;
       transform: skew(-14deg);
+      margin-bottom: 20px;
       p {
         position: absolute;
-        top: 12px;
         right: 3px;
         padding: 0;
-        position: absolute;
         transform: skew(14deg);
         color: black;
         font-size: 25px;

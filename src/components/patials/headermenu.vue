@@ -32,15 +32,6 @@ export default {
     img{
       width: 200px;
     }
-    ul{
-      font-size: 20px;
-      font-weight:500;
-      margin: 0;
-      list-style: none;
-      span{
-        color:$yellow-color;
-      }
-    }
     a{
       color: white;
       text-decoration: none;
@@ -48,6 +39,14 @@ export default {
         color: $yellow-color;
       }
     }
-
+    ul{
+      font-size: 20px;
+      font-weight:500;
+      margin: 0;
+      list-style: none;
+    };
+    span{
+      color:$yellow-color;
+    }
   }
 </style>

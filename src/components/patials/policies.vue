@@ -42,13 +42,14 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../../scss/partials/vars';
+
 .container {
   ul {
     list-style: none;
     padding: 0px;
     margin: 0px 15px;
     height: 200px;
-    
     li {
       position: relative;
       display: flex;
@@ -72,6 +73,10 @@ export default {
           }
         }
       }
+      &:hover span,
+      &:hover .info p:first-child {
+        color: $yellow-color;
+      }
       &::after {
         content: '';
         position: absolute;
@@ -79,10 +84,10 @@ export default {
         transform: translateY(-50%);
         right: 0;
         height: 70%;
-        width: 1px; 
-        background-color: grey; 
+        width: 1px;
+        background-color: grey;
       }
-      &:last-child::after{
+      &:last-child::after {
         display: none;
       }
     }
