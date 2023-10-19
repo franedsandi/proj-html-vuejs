@@ -1,6 +1,12 @@
 @use'./partials/vars' as *;
 @import 'bootstrap/scss/bootstrap';
-
+@import '@fontsource/play';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
   background-image: url(img/body-bg.jpg);
+  font-family: 'Play', sans-serif;
 }
