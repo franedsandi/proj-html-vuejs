@@ -28,7 +28,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '../../scss/partials/vars';
+@import '../../../scss/partials/vars';
 
 .top{
   border-bottom: 1px solid #342B3E;

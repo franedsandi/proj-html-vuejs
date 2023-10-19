@@ -1,21 +1,21 @@
 <script>
-import game from './highlighted.vue'
+import GameCard from './gamecard.vue';
+
 export default {
   components: {
-    game
+    GameCard
   }
-}
+};
 </script>
 
 <template>
   <div class="container d-flex justify-content-between">
-    <game/>
-    <game/>
+    <GameCard/>
+    <GameCard/>
+    <GameCard/>
   </div>
 </template>
 
 <style>
-.container{
-  margin-bottom: 60px;
-}
+
 </style>

@@ -1,6 +1,6 @@
 <script>
-import headertop from './patials/headertop.vue'
-import headermenu from './patials/headermenu.vue'
+import headertop from './patials/header/headertop.vue'
+import headermenu from './patials/header/headermenu.vue'
 
 export default {
   name: 'headerpart',
