@@ -1,0 +1,6 @@
+@use'./partials/vars' as *;
+@import 'bootstrap/scss/bootstrap';
+
+body{
+  background-image: url(img/body-bg.jpg);
+}
