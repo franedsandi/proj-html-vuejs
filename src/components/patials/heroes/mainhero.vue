@@ -18,7 +18,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '../../scss/partials/vars';
+@import '../../../scss/partials/vars';
 .hero {
   position: relative;
   img {
