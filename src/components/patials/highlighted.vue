@@ -19,7 +19,7 @@ export default {
 </template>
 
 <style lang="scss">
-@import '../../../scss/partials/vars';
+@import '../../scss/partials/vars';
 .game {
   width: 49%;
   height: 325px;

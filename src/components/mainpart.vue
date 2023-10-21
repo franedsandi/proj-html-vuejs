@@ -1,7 +1,7 @@
 <script>
 import mainhero from './patials/heroes/mainhero.vue'
 import policies from './patials/policies.vue'
-import highlight from './patials/mainhighlight/gameshighlight.vue'
+import game from './patials/highlighted.vue'
 import subtitle from './patials/subtitles.vue'
 import gamecardcontainer from './patials/gamecontainer/gamecardscontainer.vue'
 import carrousel from './patials/carrousel/cardscarrousel.vue'
@@ -13,7 +13,7 @@ export default {
   components: {
     mainhero,
     policies,
-    highlight,
+    game,
     subtitle,
     gamecardcontainer,
     options,
@@ -28,13 +28,19 @@ export default {
   <div class="custom-container">
   <mainhero/>
   <policies/>
-  <highlight/>
+  <div class="highlight-container d-flex justify-content-between">
+    <game/>
+    <game/>
+  </div>
   <subtitle/>
   <gamecardcontainer/>
   <subtitle/>
   <options/>
   <carrousel/>
-  <highlight/>
+  <div class="highlight-container d-flex justify-content-between">
+    <game/>
+    <game/>
+  </div>
   <subtitle/>
   <options/>
   <carrousel/>
@@ -50,5 +56,10 @@ export default {
 .custom-container{
   overflow: auto;
   height: calc(100vh - 128px);
+}
+.highlight-container{
+  margin:0 auto 60px ;
+  width: 1300px;
+
 }
 </style>
