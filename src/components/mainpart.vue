@@ -26,7 +26,7 @@ export default {
 
 <template>
   <div class="custom-container">
-  <hero/>
+  <mainhero/>
   <policies/>
   <highlight/>
   <subtitle/>
