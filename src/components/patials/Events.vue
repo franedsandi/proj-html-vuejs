@@ -1,52 +1,50 @@
 <script>
 export default {
-
-}
+  data() {
+    return {
+      events: [
+        {
+          title: 'Event 1',
+          image: 'img/Nisi-ut-aliquid-ex-ea-com-1400x878_t.jpg',
+          date: 'Jan 18, 2021',
+          comments: 0,
+          description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, inventore.',
+        },
+        {
+          title: 'Event 2',
+          image: 'img/Illo-inventore-veritatis-quasi-1400x878_t.jpg',
+          date: 'May 30, 2021',
+          comments: 0,
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis commodi neque eaque! Quasi.',
+        },
+        {
+          title: 'Event 3',
+          image: 'img/Consequunt-magni-dolores-1400x878_t.jpg',
+          date: 'Apr 13, 2021',
+          comments: 0,
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolor impedit atque repellat ut similique?',
+        }
+      ],
+    };
+  },
+};
 </script>
 
 <template>
   <div class="container">
-    <div class="card">
-      <img src="img/Nisi-ut-aliquid-ex-ea-com-1400x878_t.jpg" alt="play">
+    <div v-for="(event, index) in events" :key="index" class="card">
+      <img :src="event.image" :alt="event.title">
       <div class="data-coments">
         <div class="data">
           <i class="fa-regular fa-calendar-days"></i>
-          <span>Jan 18, 2021</span>
+          <span>{{ event.date }}</span>
         </div>
         <div class="coments">
           <i class="fa-regular fa-comments"></i>
-          <span>0 coments</span>
+          <span>{{ event.comments }} comments</span>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, inventore.</p>
-    </div>
-    <div class="card">
-      <img src="img/Illo-inventore-veritatis-quasi-1400x878_t.jpg" alt="controller">
-      <div class="data-coments">
-        <div class="data">
-          <i class="fa-regular fa-calendar-days"></i>
-          <span>May 30, 2021</span>
-        </div>
-        <div class="coments">
-          <i class="fa-regular fa-comments"></i>
-          <span>0 coments</span>
-        </div>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis commodi neque eaque! Quasi.</p>
-    </div>
-    <div class="card">
-      <img src="img/Consequunt-magni-dolores-1400x878_t.jpg" alt="ocullus">
-      <div class="data-coments">
-        <div class="data">
-          <i class="fa-regular fa-calendar-days"></i>
-          <span>Apr 13, 2021</span>
-        </div>
-        <div class="coments">
-          <i class="fa-regular fa-comments"></i>
-          <span>0 coments</span>
-        </div>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolor impedit atque repellat ut similique?</p>
+      <p>{{ event.description }}</p>
     </div>
   </div>
 </template>
