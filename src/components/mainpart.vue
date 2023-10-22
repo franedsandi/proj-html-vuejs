@@ -7,6 +7,7 @@ import gamecardcontainer from './patials/gamecontainer/gamecardscontainer.vue'
 import carrousel from './patials/carrousel/cardscarrousel.vue'
 import options from './patials/optionselector.vue'
 import secondaryhero from './patials/heroes/secondaryhero.vue'
+import events from './patials/Events.vue'
 
 export default {
   name: 'mainpart',
@@ -18,7 +19,8 @@ export default {
     gamecardcontainer,
     options,
     carrousel,
-    secondaryhero
+    secondaryhero,
+    events, 
   },
 }
 </script>
@@ -71,6 +73,7 @@ export default {
   <carrousel/>
   <secondaryhero/>
   <subtitle title="New Game Blogs"/>
+  <events/>
 
 
   </div>
