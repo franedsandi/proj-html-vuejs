@@ -1,46 +1,40 @@
 <script>
 export default {
+  props: {
+    buttons: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
-      active: [false, false, false],
+      active: -1,
     };
   },
   methods: {
     toggleColor(index) {
-      this.active = this.active.map((item, i) => (i === index ? true : false));
+      this.active = this.active === index ? -1 : index;
     },
   },
-};
+}
 </script>
 
 <template>
   <div class="container d-flex justify-content-center">
     <button
+      v-for="(item, index) in buttons"
+      :key="index"
       type="button"
-      class="custom-botton"
-      :class="{ 'btn-color': active[0] }"
-      @click="toggleColor(0)"
+      class="custom-button"
+      :class="{ 'btn-color': active === index }"
+      @click="toggleColor(index)"
     >
-      Toggle button
-    </button>
-    <button
-      type="button"
-      class="custom-botton"
-      :class="{ 'btn-color': active[1] }"
-      @click="toggleColor(1)"
-    >
-      Toggle button
-    </button>
-    <button
-      type="button"
-      class="custom-botton"
-      :class="{ 'btn-color': active[2] }"
-      @click="toggleColor(2)"
-    >
-      Toggle button
+      {{ item }}
     </button>
   </div>
 </template>
+
+
 
 <style lang="scss" scoped>
 @import '../../scss/partials/vars';
@@ -48,7 +42,7 @@ export default {
   margin-top: 30px;
 }
 
-.custom-botton {
+.custom-button {
   border-radius: 0;
   border: 1px solid black;
   background: none;

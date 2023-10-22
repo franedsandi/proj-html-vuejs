@@ -48,7 +48,8 @@ export default {
   <subtitle
     title="Our Products"
     />
-  <options/>
+  <options
+  :buttons="['Featured', 'New Arrivels', 'Best Sellers']"/>
   <carrousel/>
   <div class="highlight-container d-flex justify-content-between">
     <game
@@ -65,7 +66,8 @@ export default {
     />
   </div>
   <subtitle title="Deal Of The Day"/>
-  <options/>
+  <options
+  :buttons="['1026 Days', '13 Hours', '24 Mins', '17 Secs']"/>
   <carrousel/>
   <secondaryhero/>
   <subtitle title="New Game Blogs"/>
