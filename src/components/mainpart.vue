@@ -19,8 +19,7 @@ export default {
     options,
     carrousel,
     secondaryhero
-  }
-
+  },
 }
 </script>
 
@@ -29,22 +28,47 @@ export default {
   <mainhero/>
   <policies/>
   <div class="highlight-container d-flex justify-content-between">
-    <game/>
-    <game/>
+    <game
+      image="img/cms-banner-01.jpg"
+      alt="First Game"
+      highlight="Most Popular"
+      title="The Battlefield 4 Naval Strike"
+      />
+    <game
+      image="img/cms-banner-02.jpg"
+      alt="Second Game"
+      highlight="Lastest Game"
+      title="Assassin's Creed Unity Game"
+      />
   </div>
-  <subtitle/>
+  <subtitle 
+    title="Special Category"
+    />
   <gamecardcontainer/>
-  <subtitle/>
+  <subtitle
+    title="Our Products"
+    />
   <options/>
   <carrousel/>
   <div class="highlight-container d-flex justify-content-between">
-    <game/>
-    <game/>
+    <game
+      image="img/cms-banner-03.jpg"
+      alt="Third Game"
+      highlight="20% Discount"
+      title="Dragon's Dogma Video Game"
+    />
+    <game
+      image="img/cms-banner-04.jpg"
+      alt="Fourth Game"
+      highlight="30% Discount"
+      title="World Of Tanks New Game"
+    />
   </div>
-  <subtitle/>
+  <subtitle title="Deal Of The Day"/>
   <options/>
   <carrousel/>
   <secondaryhero/>
+  <subtitle title="New Game Blogs"/>
 
 
   </div>

@@ -1,24 +1,29 @@
 <script>
 export default {
-
-}
+  props: {
+    image: String,
+    alt:  String,
+    highlight: String,
+    title: String,
+  },
+};
 </script>
 
 <template>
   <div class="game">
-    <img src="img/cms-banner-01.jpg" alt="">
+    <img :src="image" :alt="alt" />
     <div class="trapecio-rectangular">
     </div>
     <div class="info d-flex">
       <div class="paralelogramo">
-        <p>Most Popular</p>
+        <p>{{ highlight }}</p>
       </div>
-      <p>The Battlefield 4 Naval Strike</p> 
+      <p>{{ title }}</p>
     </div>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../scss/partials/vars';
 .game {
   width: 49%;

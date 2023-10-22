@@ -1,12 +1,15 @@
 <script>
 export default {
+  props:{
+    title:String
+  }
 
 }
 </script>
 
 <template>
   <div class="subtitle text-center">
-    <h1>Subtitle</h1>
+    <h1>{{ title }}</h1>
   </div>
 </template>
 

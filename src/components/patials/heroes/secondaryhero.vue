@@ -65,6 +65,7 @@ export default {
   background-image: url('img/parallax.jpg');
   background-size: cover;
   background-position: center bottom;
+  margin-bottom: 50px;
   .carousel-indicators {
     text-align: center;
     display: flex;
