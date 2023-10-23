@@ -1,7 +1,32 @@
 <script>
 export default {
-
-}
+  data() {
+    return {
+      infoItems: [
+        {
+          title: "Information",
+          items: [
+            { text: "Bookmark", link: "#" },
+            { text: "Features", link: "#" },
+            { text: "Sistemap", link: "#" },
+            { text: "List", link: "#" },
+            { text: "Contact Us", link: "#" },
+          ],
+        },
+        {
+          title: "Extras",
+          items: [
+            { text: "Delivery", link: "#" },
+            { text: "Cart", link: "#" },
+            { text: "Terms conditions", link: "#" },
+            { text: "My Account", link: "#" },
+            { text: "About Us", link: "#" },
+          ],
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <template>
@@ -16,26 +41,15 @@ export default {
         <li class="email">demo@example.com</li>
       </ul>
     </div>
-    <div class="info">
-      <h3>Information</h3>
+    <div v-for="(item, index) in infoItems" :key="index" class="info">
+      <h3>{{ item.title }}</h3>
       <ul>
-        <li><a href="#">Bookmark</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Sistemap</a></li>
-        <li><a href="#">List</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li v-for="(listItem, idx) in item.items" :key="idx">
+          <a v-if="listItem.link" :href="listItem.link">{{ listItem.text }}</a>
+          <span v-else>{{ listItem.text }}</span>
+        </li>
       </ul>
-      </div>
-      <div class="info">
-        <h3>Extras</h3>
-        <ul>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">Terms conditions</a></li>
-          <li><a href="#">My Account</a></li>
-          <li><a href="#">About Us</a></li>
-        </ul>
-      </div>
+    </div>
       <div class="info">
         <h3>Our Newsletter</h3>
         <ul>
