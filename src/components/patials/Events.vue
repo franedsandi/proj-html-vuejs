@@ -32,8 +32,13 @@ export default {
 
 <template>
   <div class="container">
+    
     <div v-for="(event, index) in events" :key="index" class="card">
       <img :src="event.image" :alt="event.title">
+      <div class="actionbuttons">
+        <div class="action plus"><i class="fa-solid fa-plus"></i></div>
+        <div class="action link"><i class="fa-solid fa-link"></i></div>
+      </div>
       <div class="data-coments">
         <div class="data">
           <i class="fa-regular fa-calendar-days"></i>
@@ -51,13 +56,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../scss/partials/vars';
-.container{
+.container {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-
   flex-wrap: wrap;
-  .card{
+
+  .card {
+    position: relative;
     width: calc(100% / 3 - 15px);
     border-radius: 0;
     border: none;
@@ -65,24 +71,56 @@ export default {
     color: white;
     font-size: 13px;
     margin-bottom: 70px;
-    &:hover{
-      cursor: pointer;
+
+    .actionbuttons {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      gap: 10px;
+
+      .action {
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: $yellow-color; // Aquí deberías usar un color en lugar de la variable
+        }
+      }
     }
-    .data-coments{
+
+    &:hover {
+      cursor: pointer;
+
+      .actionbuttons {
+        display: flex;
+      }
+    }
+
+    .data-coments {
       padding: 15px 0px;
       display: flex;
       gap: 20px;
-      i{
+
+      i {
         margin-right: 7px;
-        color: $yellow-color;
+        color: $yellow-color; // Aquí deberías usar un color en lugar de la variable
       }
     }
-    
-  }&::after{
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: $yellow-color;
-    }
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $yellow-color; // Aquí deberías usar un color en lugar de la variable
+  }
 }
 </style>
