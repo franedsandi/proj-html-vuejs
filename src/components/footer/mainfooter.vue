@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      isHovering: false,
       infoItems: [
         {
           title: "Information",
@@ -54,7 +55,28 @@ export default {
         <h3>Our Newsletter</h3>
         <ul>
           <li>There are many variations of passages of form humour or randomised</li>
-          <li></li>
+          <li>
+            <div
+            class="input d-flex flex-column flex-sm-row w-100 gap-2"
+           
+          >
+            <label for="newsletter1" class="visually-hidden"></label>
+            <input
+              id="newsletter1"
+              type="text"
+              class="form-control"
+              placeholder=""
+              fdprocessedid="dps0l"
+            />
+            <button class="btn btn-primary" type="button" fdprocessedid="0ckvg" @mouseenter="isHovering = true"
+            @mouseleave="isHovering = false">
+              <img
+                :src="isHovering ? 'img/arrow-yellow.png' : 'img/arrow-black.png'"
+                alt="arrow"
+              />
+            </button>
+          </div>
+    </li>
           <li>
             <ul class="social d-flex">
               <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -118,5 +140,22 @@ li{
   font-family: "Font Awesome 5 Free";
   margin-right: 5px;
   color: $yellow-color;
+}
+.input{
+  background-color: $white-color;
+}
+button{
+  background-color: $white-color;
+  border: none;
+  border-radius: 0;
+  img{
+    width: 100%;
+    object-fit: contain;
+    height: 30px;
+  }
+  &:hover{
+    background-color: white;
+  }
+
 }
 </style>
