@@ -1,178 +1,190 @@
 <script>
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
+
 export default {
   data() {
     return {
-      
+      swiper: null,
       slides: [
-        {
-          imgSrc: "img/04-768x768.jpg",
-          discount: "-44%",
-          vote: "4",
-          productName: "Sony DualShock 4 V2",
-          fullPrice: "£ 180.00",
-          discountedPrice: "£ 100.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/09-768x768.jpg",
-          vote: "0",
-          productName: "Avermedia LIVE Micro AEGIS",
-          discountedPrice: "£ 83.00 - £ 90.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/03-768x768.jpg",
-          discount: "-10%",
-          vote: "3",
-          productName: "Gaming Mouse Pad Black-Red",
-          fullPrice: "£ 20.00",
-          discountedPrice: "£ 18.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/11-768x768.jpg",
-          vote: "2",
-          productName: "Sony DualShock 4 V1",
-          fullPrice: "£ 50.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/02-768x768.jpg",
-          vote: "5",
-          productName: "Microsoft Xbox One Stereo Headset",
-          fullPrice: "£ 70.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/05-768x768.jpg",
-          discount: "-10%",
-          vote: "3",
-          productName: "Oculus Rift",
-          fullPrice: "£ 400.00",
-          discountedPrice: "£ 360.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/06-768x768.jpg",
-          discount: "-30%",
-          vote: "3",
-          productName: "Sony Z1R",
-          fullPrice: "£ 2300.00",
-          discountedPrice: "£ 16100.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/07-768x768.jpg",
-          vote: "3",
-          productName: "Etichette Adesive per PS4 controller",
-          fullPrice: "£ 10.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/08-768x768.jpg",
-          vote: "3",
-          productName: "Etichette Adesive per PS4 controller",
-          fullPrice: "£ 10.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/10-768x768.jpg",
-          vote: "2",
-          productName: "Controller Generico SNES",
-          fullPrice: "£ 20.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/12-768x768.jpg",
-          discount: "-50%",
-          vote: "3",
-          productName: "Sony MDR-1ABT",
-          fullPrice: "£ 2600.00",
-          discountedPrice: "£ 1300.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-        {
-          imgSrc: "img/13-768x768.jpg",
-          vote: "3",
-          productName: "Etichette Adesive per Xbox One controller",
-          fullPrice: "£ 10.00",
-          activeButtons: [],
-          buttons: [
-            { icon: "fa-bag-shopping", index: 0 },
-            { icon: "fa-heart", index: 1 },
-            { icon: "fa-maximize", index: 2 },
-            { icon: "fa-eye", index: 3 },
-          ],
-        },
-
+      {
+  imgSrc: "img/04-768x768.jpg",
+  discount: "-44%",
+  vote: "4",
+  productName: "Sony DualShock 4 V2",
+  fullPrice: "£ 180.00",
+  discountedPrice: "£ 100.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/09-768x768.jpg",
+  vote: "0",
+  productName: "Avermedia LIVE Micro AEGIS",
+  discountedPrice: "£ 83.00 - £ 90.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/03-768x768.jpg",
+  discount: "-10%",
+  vote: "3",
+  productName: "Gaming Mouse Pad Black-Red",
+  fullPrice: "£ 20.00",
+  discountedPrice: "£ 18.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/11-768x768.jpg",
+  vote: "2",
+  productName: "Sony DualShock 4 V1",
+  fullPrice: "£ 50.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/02-768x768.jpg",
+  vote: "5",
+  productName: "Microsoft Xbox One Stereo Headset",
+  fullPrice: "£ 70.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/05-768x768.jpg",
+  discount: "-10%",
+  vote: "3",
+  productName: "Oculus Rift",
+  fullPrice: "£ 400.00",
+  discountedPrice: "£ 360.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/06-768x768.jpg",
+  discount: "-30%",
+  vote: "3",
+  productName: "Sony Z1R",
+  fullPrice: "£ 2300.00",
+  discountedPrice: "£ 16100.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/07-768x768.jpg",
+  vote: "3",
+  productName: "Etichette Adesive per PS4 controller",
+  fullPrice: "£ 10.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/08-768x768.jpg",
+  vote: "3",
+  productName: "Etichette Adesive per PS4 controller",
+  fullPrice: "£ 10.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/10-768x768.jpg",
+  vote: "2",
+  productName: "Controller Generico SNES",
+  fullPrice: "£ 20.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/12-768x768.jpg",
+  discount: "-50%",
+  vote: "3",
+  productName: "Sony MDR-1ABT",
+  fullPrice: "£ 2600.00",
+  discountedPrice: "£ 1300.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
+{
+  imgSrc: "img/13-768x768.jpg",
+  vote: "3",
+  productName: "Etichette Adesive per Xbox One controller",
+  fullPrice: "£ 10.00",
+  activeButtons: [],
+  buttons: [
+    { icon: "fa-bag-shopping", index: 0 },
+    { icon: "fa-heart", index: 1 },
+    { icon: "fa-maximize", index: 2 },
+    { icon: "fa-eye", index: 3 },
+  ],
+},
       ],
     };
+  },
+  mounted() {
+    this.swiper = new Swiper('.mySwiper', {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
   },
   methods: {
     setActiveButton(index, slide) {
@@ -188,38 +200,41 @@ export default {
 
 <template>
   <div class="container">
-    <swiper :slidesPerView="4" class="mySwiper">
-      <swiper-slide v-for="(slide, index) in slides" :key="index">
-        <div class="card">
-          <img :src="slide.imgSrc" alt="" />
-          <div v-if="slide.discount" class="paralelogramo">
-            <p>{{ slide.discount }}</p>
-          </div>
-          <div class="info">
-            <div class="stars">
-              <i v-for="n in 5" :key="n" :class="['fa-solid fa-star', slide.vote >= n ? 'filled' : 'empty']"></i>
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="(slide, index) in slides" :key="index">
+          <div class="card">
+            <img :src="slide.imgSrc" alt="" />
+            <div v-if="slide.discount" class="paralelogramo">
+              <p>{{ slide.discount }}</p>
             </div>
-            <p>{{ slide.productName }}</p>
-            <div class="price">
-              <p class="fullprice">{{ slide.fullPrice }}</p>
-              <p class="discount">{{ slide.discountedPrice }}</p>
-            </div>
-            <div class="options">
-              <button
-                v-for="button in slide.buttons"
-                :key="button.index"
-                type="button"
-                class="custom-button"
-                :class="{ 'btn-color': slide.activeButtons.includes(button.index) }"
-                @click="setActiveButton(button.index, slide)"
-              >
-                <i class="fa-solid" :class="button.icon"></i>
-              </button>
+            <div class="info">
+              <div class="stars">
+                <i v-for="n in 5" :key="n" :class="['fa-solid fa-star', slide.vote >= n ? 'filled' : 'empty']"></i>
+              </div>
+              <p>{{ slide.productName }}</p>
+              <div class="price">
+                <p v-if="slide.fullPrice" class="fullprice">{{ slide.fullPrice }}</p>
+                <p v-if="slide.discountedPrice" class="discount">{{ slide.discountedPrice }}</p>
+              </div>
+              <div class="options">
+                <button
+                  v-for="button in slide.buttons"
+                  :key="button.index"
+                  type="button"
+                  class="custom-button"
+                  :class="{ 'btn-color': slide.activeButtons.includes(button.index) }"
+                  @click="setActiveButton(button.index, slide)"
+                >
+                  <i class="fa-solid" :class="button.icon"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </swiper-slide>
-    </swiper>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </template>
 
@@ -228,22 +243,19 @@ export default {
 swiper {
   width: 100%;
   height: 100%;
-  display: flex;
-  gap: 15px;
-  overflow:auto;
 
   swiper-slide {
     text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% / 4 - 10px);
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 }
 
 .container {
   margin: 50px auto;
+  overflow: hidden;
 
   .card {
     background-color: #22162e;
