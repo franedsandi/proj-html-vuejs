@@ -8,6 +8,7 @@ import carrousel from './patials/cardscarrousel.vue'
 import options from './patials/optionselector.vue'
 import secondaryhero from './patials/heroes/secondaryhero.vue'
 import events from './patials/Events.vue'
+import clans from './patials/clans.vue'
 
 export default {
   name: 'mainpart',
@@ -21,6 +22,7 @@ export default {
     carrousel,
     secondaryhero,
     events, 
+    clans
   },
 }
 </script>
@@ -74,6 +76,8 @@ export default {
   <secondaryhero/>
   <subtitle title="New Game Blogs"/>
   <events/>
+  <clans/>
+  
 
 
   </div>
