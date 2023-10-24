@@ -23,6 +23,7 @@ export default {
   .custom-container{
   position: relative; 
   height: 30px;
+  color:white;
   &::before{
     content: '';
     height: 1px;
